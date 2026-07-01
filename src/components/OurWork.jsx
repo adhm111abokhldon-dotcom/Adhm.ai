@@ -6,17 +6,17 @@ const OurWork = () => {
     {
       title: "Mobile app marketing",
       desc: "We turn ideas into powerful digital solution that connect, engage...",
-      image: "/public/mobile-app-template.jpg",
+      image: "/mobile-app-template.jpg",
     },
     {
       title: "Dashboard mangement",
       desc: "We help you execute your plan and deliver results.",
-      image: "/public/dashboard.avif",
+      image: "/dashboard.avif",
     },
     {
       title: "Fitness app promotion",
       desc: "We help you create a marketing strategy that drives results.",
-      image: "/public/fitness-app.webp",
+      image: "/fitness-app.webp",
     },
   ];
 
