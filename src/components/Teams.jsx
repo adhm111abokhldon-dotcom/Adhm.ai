@@ -7,27 +7,27 @@ const Teams = () => {
     {
       name: "Anas AL Satal",
       title: "Marketing & Designer",
-      image: "/public/anas2.jpeg",
+      image: "/anas2.jpeg",
     },
     {
       name: "Mohamed Samer Saad Al Deen",
       title: "ISIS Member",
-      image: "/public/samer.jpeg",
+      image: "/samer.jpeg",
     },
     {
       name: "Opada AL Hroop",
       title: "No One Know",
-      image: "/public/apada2.jpeg",
+      image: "/apada2.jpeg",
     },
     {
       name: "Mohamed AL Hariri",
       title: "SEO & Top Manger",
-      image: "/public/hariri.jpeg",
+      image: "/hariri.jpeg",
     },
     {
       name: "Aobe AL Hariri",
       title: "Security Guard",
-      image: "/public/aobe.jpeg",
+      image: "/aobe.jpeg",
     },
   ];
 

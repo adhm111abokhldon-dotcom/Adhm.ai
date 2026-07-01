@@ -73,11 +73,7 @@ const Navbar = ({ theme, setTheme }) => {
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
-        <ThemeToggleBtn
-          
-          theme={theme}
-          setTheme={setTheme}
-        />
+        <ThemeToggleBtn theme={theme} setTheme={setTheme} />
 
         <MdMenu
           className="sm:hidden dark:text-[#9B00FE] cursor-pointer w-8 h-auto"

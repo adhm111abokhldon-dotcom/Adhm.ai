@@ -17,17 +17,17 @@ const Hero = () => {
       >
         <img
           className="w-9 h-10 rotate-34 object-cover rounded-full"
-          src="/public/anas.jpeg"
+          src="/anas.jpeg"
           alt=""
         />
         <img
           className="w-9 h-10 object-cover z-11 -ml-2 rounded-full"
-          src="/public/obada.jpeg"
+          src="/obada.jpeg"
           alt=""
         />
         <img
           className="w-9 h-10 object-cover z-12 rounded-full -ml-2"
-          src="/public/aobe.jpeg"
+          src="/aobe.jpeg"
           alt=""
         />
         <p className="text-xs font-medium ml-2">Trusted by 10k+ people</p>
@@ -67,7 +67,7 @@ const Hero = () => {
       >
         <img
           className="w-full max-w-6xl object-cover relative z-10 rounded-[35px]"
-          src="/public/bzak-woman-3687080.jpg"
+          src="/bzak-woman-3687080.jpg"
           alt=""
         />
         <div

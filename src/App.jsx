@@ -10,8 +10,6 @@ import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
 
 function App() {
-  
-
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light",
   );
@@ -27,8 +25,6 @@ function App() {
       <Teams />
       <ContactUs />
       <Footer />
-
-  
     </div>
   );
 }
