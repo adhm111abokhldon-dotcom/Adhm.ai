@@ -1,24 +1,22 @@
 import Title from "./Title";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const OurWork = () => {
-  const workData = [
-    {
-      title: "Mobile app marketing",
-      desc: "We turn ideas into powerful digital solution that connect, engage...",
-      image: "/mobile-app-template.jpg",
-    },
-    {
-      title: "Dashboard mangement",
-      desc: "We help you execute your plan and deliver results.",
-      image: "/dashboard.avif",
-    },
-    {
-      title: "Fitness app promotion",
-      desc: "We help you create a marketing strategy that drives results.",
-      image: "/fitness-app.webp",
-    },
+  const { t } = useTranslation();
+
+  const images = [
+    "/mobile-app-template.jpg",
+    "/dashboard.avif",
+    "/fitness-app.webp",
   ];
+
+  const workItems = t("ourWork.items", { returnObjects: true });
+
+  const workData = workItems.map((item, index) => ({
+    ...item,
+    image: images[index],
+  }));
 
   return (
     <motion.div
@@ -30,10 +28,7 @@ const OurWork = () => {
       className=" flex flex-col items-center gap-7 px-4 sm:px-12
    lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white"
     >
-      <Title
-        title="Our latest work"
-        desc="From strategy to execution, we craft digital solution that move your business forward."
-      />
+      <Title title={t("ourWork.title")} desc={t("ourWork.desc")} />
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
         {workData.map((work, index) => (

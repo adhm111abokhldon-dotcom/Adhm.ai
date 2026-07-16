@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+
 const TrustedBy = () => {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -16,7 +19,7 @@ const TrustedBy = () => {
         viewport={{ once: true }}
         className="font-semibold text-center"
       >
-        Trused by Leading Companies
+        {t("trusted-by.trusted")}
       </motion.h3>
       <motion.div
         initial="hidden"

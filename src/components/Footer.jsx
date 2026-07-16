@@ -93,7 +93,7 @@ const Footer = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap"
       >
-        <p>Adhm.ai 2026 © Adhm - All right reserved </p>
+        <p>2026 © Adhm - All right reserved </p>
         <div className="flex items-center justify-between gap-4">
           <a
             href="https://www.facebook.com/adhm.k.aobeid/"

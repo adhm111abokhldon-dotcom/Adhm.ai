@@ -6,33 +6,24 @@ import { HiOutlineMegaphone } from "react-icons/hi2"; //market
 import Title from "./Title";
 import ServiceCard from "./ServiceCard";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
-  const servicesData = [
-    {
-      title: "Advertising",
-      description:
-        "We turn ideas into powerful digital solutions that connect, engage...",
-      icon: <HiOutlineAnnotation />,
-    },
-    {
-      title: "Content Marketing",
-      description: "We help you turn execute your plan and deliver results.",
-      icon: <HiOutlineMegaphone />,
-    },
-    {
-      title: "Content Writing",
-      description:
-        "We help you create a marketing srategy that drives results.",
-      icon: <HiOutlinePencilSquare />,
-    },
-    {
-      title: "Social media",
-      description:
-        "We help you build a strong social media presence and engage with your audience.",
-      icon: <TiSocialTwitter />,
-    },
+  const { t } = useTranslation();
+
+  const icons = [
+    <HiOutlineAnnotation />,
+    <HiOutlineMegaphone />,
+    <HiOutlinePencilSquare />,
+    <TiSocialTwitter />,
   ];
+
+  const servicesItems = t("services.items", { returnObjects: true });
+
+  const servicesData = servicesItems.map((item, index) => ({
+    ...item,
+    icon: icons[index],
+  }));
 
   return (
     <motion.div
@@ -52,10 +43,7 @@ const Services = () => {
            "
       ></div>
 
-      <Title
-        title="How can we help?"
-        desc="From strategy to execution, we craft digital solutions that move your business forward."
-      />
+      <Title title={t("services.title")} desc={t("services.desc")} />
       <div className="flex flex-col md:grid grid-cols-2">
         {servicesData.map((service, index) => (
           <ServiceCard key={index} service={service} index={index} />

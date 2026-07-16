@@ -1,36 +1,24 @@
 import React from "react";
 import Title from "./Title";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Teams = () => {
-  const teamData = [
-    {
-      name: "Anas AL Satal",
-      title: "Marketing & Designer",
-      image: "/anas2.jpeg",
-    },
-    {
-      name: "Mohamed Samer Saad Al Deen",
-      title: "ISIS Member",
-      image: "/samer.jpeg",
-    },
-    {
-      name: "Opada AL Hroop",
-      title: "No One Know",
-      image: "/apada2.jpeg",
-    },
-    {
-      name: "Mohamed AL Hariri",
-      title: "SEO & Top Manger",
-      image: "/hariri.jpeg",
-    },
-    {
-      name: "Aobe AL Hariri",
-      title: "Security Guard",
-      image: "/aobe.jpeg",
-    },
+  const { t } = useTranslation();
+  const images = [
+    "/anas2.jpeg",
+    "/samer.jpeg",
+    "/apada2.jpeg",
+    "/hariri.jpeg",
+    "/aobe.jpeg",
   ];
 
+  const teamItems = t("team.items", { returnObjects: true });
+  console.log(teamItems);
+  const teamData = teamItems.map((item, index) => ({
+    ...item,
+    image: images[index],
+  }));
   return (
     <motion.div
       initial="hidden"
@@ -38,10 +26,7 @@ const Teams = () => {
       viewport={{ once: true }}
       className="px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 flex flex-col gap-7 items-center text-gray-700 dark:text-white"
     >
-      <Title
-        title="Meet the team"
-        desc="A passionate team of digital experts dedicated to your brands success."
-      />
+      <Title title={t("team.title")} desc={t("team.desc")} />
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
         {teamData.map((team, index) => (
           <motion.div

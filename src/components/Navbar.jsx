@@ -1,12 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { MdMenu } from "react-icons/md";
 import ThemeToggleBtn from "./ThemeToggleBtn";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [local, setLocal] = useState("ar");
+  const { t } = useTranslation();
+  useEffect(() => {
+    i18n.changeLanguage("ar");
+  }, []);
+  const handelLocal = () => {
+    const newLang = local === "ar" ? "en" : "ar";
+    const dir = newLang === "ar" ? "rtl" : "ltr";
+    setLocal(newLang);
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <motion.div
@@ -17,9 +30,8 @@ const Navbar = ({ theme, setTheme }) => {
      sticky top-0 z-20 font-medium backdrop-blur-xl bg-white/50 dark:bg-gray-900/70"
     >
       <div>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl dark:text-white">
-          Adhm<span className="text-xl sm:text-2xl">.</span>
-          <span className="text-[#9B00FE]">ai</span>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#9B00FE] dark:text-white">
+          Adhm
         </h2>
       </div>
       <div
@@ -41,7 +53,7 @@ const Navbar = ({ theme, setTheme }) => {
           href="#"
           className="sm:hover:border-b"
         >
-          Home
+          {t("nav.home")}
         </a>
         <a
           onClick={() => {
@@ -50,7 +62,7 @@ const Navbar = ({ theme, setTheme }) => {
           href="#services"
           className="sm:hover:border-b"
         >
-          Services
+          {t("nav.services")}
         </a>
         <a
           onClick={() => {
@@ -59,7 +71,7 @@ const Navbar = ({ theme, setTheme }) => {
           href="#our-work"
           className="sm:hover:border-b"
         >
-          Our Work
+          {t("nav.our-work")}
         </a>
         <a
           onClick={() => {
@@ -68,11 +80,17 @@ const Navbar = ({ theme, setTheme }) => {
           href="#contact-us"
           className="sm:hover:border-b"
         >
-          Contact Us
+          {t("nav.contact-us")}
         </a>
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
+        <button
+          onClick={handelLocal}
+          className="bg-primary p-2 cursor-pointer rounded-2xl text-white "
+        >
+          {local === "ar" ? "الانجليزية" : "Arabic"}
+        </button>
         <ThemeToggleBtn theme={theme} setTheme={setTheme} />
 
         <MdMenu
@@ -86,7 +104,7 @@ const Navbar = ({ theme, setTheme }) => {
           className="text-sm max-sm:hidden flex items-center gap-2  bg-primary
          text-white px-6 py-2 rounded-full cursor-pointer hover:scale-103 transition-all"
         >
-          Connect <FaArrowRight className="h-auto w-3" />
+          {t("nav.connect")} <FaArrowRight className="h-auto w-3" />
         </a>
       </div>
     </motion.div>

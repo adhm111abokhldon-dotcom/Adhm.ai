@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
@@ -11,4 +13,7 @@
     font-family: var(--font-manrope);
     font-weight: 500;
   }
+}
+[dir="rtl"] {
+  font-family: "Cairo", sans-serif;
 }

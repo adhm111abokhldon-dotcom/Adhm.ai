@@ -42,9 +42,9 @@ const ServiceCard = ({ service, index }) => {
               "size-9 sm:size-11 aspect-square bg-white dark:bg-gray-900 rounded-full fill-indigo-500 dark:fill-auto p-2",
           })}
         </div>
-        <div className="flex-1">
+        <div className="flex-1 ">
           <h3 className="font-bold">{service.title}</h3>
-          <p className="text-sm mt-2">{service.description}</p>
+          <p className="text-sm mt-2 ">{service.description}</p>
         </div>
       </div>
     </motion.div>

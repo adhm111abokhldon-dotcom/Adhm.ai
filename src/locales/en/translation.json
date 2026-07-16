@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "our-work": "Our Work",
+    "contact-us": "Contact Us",
+    "connect": "connect"
+  },
+
+  "hero": {
+    "hero_title": "Turning imagination into",
+    "digital": "digital",
+    "impact": "impact.",
+    "hero_p": "Creating meaningful connections and turning big ideas into interactive digital experincees.",
+    "trusted": "Trusted by 10k+ people"
+  },
+  "trusted-by": {
+    "trusted": "Trusted by Leading Companies"
+  },
+  "ourWork": {
+    "items": [
+      {
+        "title": "Mobile app marketing",
+        "desc": "We turn ideas into powerful digital solutions that connect, engage..."
+      },
+      {
+        "title": "Dashboard management",
+        "desc": "We help you execute your plan and deliver results."
+      },
+      {
+        "title": "Fitness app promotion",
+        "desc": "We help you create a marketing strategy that drives results."
+      }
+    ],
+    "title": "Our latest work",
+    "desc": "From strategy to execution, we craft digital solution that move your business forward."
+  },
+  "services": {
+    "items": [
+      {
+        "title": "Advertising",
+        "description": "We turn ideas into powerful digital solutions that connect, engage..."
+      },
+      {
+        "title": "Content Marketing",
+        "description": "We help you turn execute your plan and deliver results."
+      },
+      {
+        "title": "Content Writing",
+        "description": "We help you create a marketing srategy that drives results."
+      },
+      {
+        "title": "Social media",
+        "description": "We help you build a strong social media presence and engage with your audience."
+      }
+    ],
+    "title": "How can we help?",
+    "desc": "From strategy to execution, we craft digital solutions that move your business forward."
+  },
+  "team": {
+    "items": [
+      {
+        "name": "Anas AL Satal",
+        "title": "Marketing & Designer"
+      },
+      {
+        "name": "Mohamed Samer Saad Al Deen",
+        "title": "ISIS Member"
+      },
+      {
+        "name": "Opada AL Hroop",
+        "title": "No One Know"
+      },
+      {
+        "name": "Mohamed AL Hariri",
+        "title": "SEO & Top Manger"
+      },
+      {
+        "name": "Aobe AL Hariri",
+        "title": "Security Guard"
+      }
+    ],
+    "title": "Meet the team",
+    "desc": "A passionate team of digital experts dedicated to your brands success."
+  }
+}
