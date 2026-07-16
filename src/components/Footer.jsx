@@ -26,9 +26,8 @@ const Footer = () => {
         >
           <a href="#">
             {" "}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl dark:text-white">
-              Adhm<span className="text-xl sm:text-2xl">.</span>
-              <span className="text-[#9B00FE]">ai</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#9B00FE]">
+              Adhm
             </h2>
           </a>
           <p className="max-w-md">
